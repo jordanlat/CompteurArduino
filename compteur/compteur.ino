@@ -2,20 +2,20 @@
 #include <TM1637Display.h>
 
 // Module connection pins (Digital Pins)
-#define CLK1 2
-#define DIO1 3
+#define CLK1 12
+#define DIO1 11
 
-#define CLK2 4
-#define DIO2 5
+#define CLK2 9
+#define DIO2 8
 
-#define bp1Up 6
-#define bp1Down 7
+#define bp1Up 2
+#define bp1Down 3
 
-#define bp2Up 8
-#define bp2Down 9
+#define bp2Up 4
+#define bp2Down 5
 
 // The amount of time (in milliseconds) between tests
-#define DELAY   200
+#define DELAY   100
 int score1;
 int score2;
 
@@ -26,6 +26,8 @@ void setup()
 {
    display1.clear();
    display1.setBrightness(0x0f);
+   display2.clear();
+   display2.setBrightness(0x0f);
    score1 = 0;
    score2 = 0;
    pinMode(bp1Up, INPUT_PULLUP);
